@@ -28,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
         mediaplayer=MediaPlayer.create(this,R.raw.music);
 //        mediaplayer.start();
         seekbar.setMax(mediaplayer.getDuration());
-
-
         seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -37,15 +35,11 @@ public class MainActivity extends AppCompatActivity {
                 if(fromUser) {
                     mediaplayer.seekTo(progress);
                 }
-
             }
-
-
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
 
             }
-
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
 
